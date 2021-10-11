@@ -7,8 +7,15 @@
         mc:Ignorable="d"
         Title="Las 4 estaciones" Height="450" Width="800" Icon="assets/32.ico">
     <Grid Background="#FFB8E0E2">
-
-        <TextBlock HorizontalAlignment="Center" FontSize="26" FontWeight="Bold" FontStyle="Italic" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <TextBlock HorizontalAlignment="Center" FontSize="32" FontWeight="Bold" FontStyle="Italic" >
             <TextBlock.Effect>
                 <DropShadowEffect/>
             </TextBlock.Effect>
@@ -18,7 +25,7 @@
                     <GradientStop Color="#FF057400" Offset="1"/>
                 </LinearGradientBrush>
             </TextBlock.Foreground>Las 4 estaciones</TextBlock>
-        <UniformGrid Rows="2" Columns="2" Margin="0,35,0,0">
+        <UniformGrid Grid.Row="1" Grid.Column="0" Rows="2" Columns="2">
             <ScrollViewer Margin="7" HorizontalScrollBarVisibility="Auto">
                 <Image Source="assets/invierno.jpg" Stretch="None"></Image>
             </ScrollViewer>
